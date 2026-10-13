@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dev Store - Selección</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,sans-serif}
+body{min-height:100vh;background:#080c18;color:#fff;display:flex;flex-direction:column;align-items:center;padding:24px 16px}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(900px 500px at 20% 0%, rgba(0,132,255,.25), transparent), #080c18}
+h1{font-size:28px;font-weight:900;margin-bottom:6px;text-align:center} h1 span{color:#00c8ff}
+.sub{color:#8fa3c7;font-size:13px;margin-bottom:26px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1020px;width:100%}
+.card{background:rgba(16,26,47,0.88);backdrop-filter:blur(14px);border:1px solid rgba(0,200,255,.18);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:.3s;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.card:hover{transform:translateY(-6px);border-color:#00e5ff;box-shadow:0 20px 50px rgba(0,0,0,.6),0 0 24px rgba(0,200,255,.25)}
+.card-img{width:100%;aspect-ratio:16/9;background:#000;overflow:hidden;display:grid;place-items:center}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.card:hover .card-img img{transform:scale(1.04)}
+.card-body{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.card-body h2{font-size:18px;font-weight:900;margin-bottom:6px}
+.card-body p{font-size:12.5px;color:#a9bddf;line-height:1.4;min-height:42px;margin-bottom:14px}
+.btn-ir{margin-top:auto;width:100%;padding:12px 16px;border:none;border-radius:12px;background:linear-gradient(135deg,#0084ff 0%, #00b7ff 100%);color:#fff;font-weight:900;font-size:14px;letter-spacing:0.5px;cursor:pointer;transition:.25s;box-shadow:0 6px 18px rgba(0,132,255,.35);text-transform:uppercase}
+.btn-ir:hover{background:linear-gradient(135deg,#0066ff 0%, #0090ff 100%);box-shadow:0 10px 28px rgba(0,102,255,.55);transform:translateY(-1px);filter:brightness(1.15)}
+.iframe-bg{position:fixed;inset:0;background:rgba(0,0,0,.92);backdrop-filter:blur(16px);display:none;z-index:200;flex-direction:column}
+.iframe-bg.show{display:flex}
+.iframe-header{height:60px;background:rgba(13,20,36,0.98);border-bottom:1px solid rgba(0,200,255,.25);display:flex;align-items:center;justify-content:space-between;padding:0 18px}
+.iframe-header h2{font-size:16px;font-weight:900} .iframe-header h2 span{color:#00c8ff}
+.iframe-header button{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;padding:8px 16px;border-radius:10px;cursor:pointer;font-weight:800}
+.iframe-bg iframe{flex:1;width:100%;border:none;background:#000}
+</style>
+</head>
+<body>
+<h1>DEV <span>STORE</span></h1>
+<p class="sub">Selecciona tu plataforma para abrir la tienda oficial</p>
+
+<div class="grid">
+  <div class="card">
+    <div class="card-img"><img src="ps4-devstore.jpg" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>PS4 Dev Store</h2>
+      <p>Tienda oficial de homebrew y ports para PS4. GoldHEN, Apollo, Itemzflow y juegos PKG actualizados.</p>
+      <button class="btn-ir" onclick="openStore('ps4dev.html','PS4 Dev Store')">IR →</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img"><img src="ps3-devstore.jpg" alt="PS3 Dev Store"></div>
+    <div class="card-body">
+      <h2>PS3 Dev Store</h2>
+      <p>Catálogo PS3 con PKG, homebrew, emuladores y herramientas para HEN y CFW.</p>
+      <button class="btn-ir" onclick="openStore('ps3dev.html','PS3 Dev Store')">IR →</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img"><img src="ps2-devstore.jpg" alt="PS2 Dev Store"></div>
+    <div class="card-body">
+      <h2>PS2 Dev Store</h2>
+      <p>Clásicos PS2 remasterizados, OPL, homebrew y packs de juegos listos para tu consola.</p>
+      <button class="btn-ir" onclick="openStore('ps2dev.html','PS2 Dev Store')">IR →</button>
+    </div>
+  </div>
+</div>
+
+<div class="iframe-bg" id="iframeBg">
+  <div class="iframe-header"><h2>🎮 <span id="iframeTitle">Dev Store</span></h2><button onclick="closeStore()">✕ Cerrar</button></div>
+  <iframe id="storeFrame" src=""></iframe>
+</div>
+
+<script>
+function openStore(url,title){
+  document.getElementById('storeFrame').src=url;
+  document.getElementById('iframeTitle').innerText=title;
+  document.getElementById('iframeBg').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function closeStore(){
+  document.getElementById('iframeBg').classList.remove('show');
+  document.getElementById('storeFrame').src='';
+  document.body.style.overflow='';
+}
+</script>
+</body>
+</html>
