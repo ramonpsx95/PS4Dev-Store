@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dev Store - Selección</title>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev Store - Selección</title>
+  <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,sans-serif}
 body{min-height:100vh;background:#080c18;color:#fff;display:flex;flex-direction:column;align-items:center;padding:24px 16px}
 body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(900px 500px at 20% 0%, rgba(0,132,255,.25), transparent), #080c18}
@@ -29,56 +30,259 @@ h1{font-size:28px;font-weight:900;margin-bottom:6px;text-align:center} h1 span{c
 .iframe-bg iframe{flex:1;width:100%;border:none;background:#000}
 </style>
 </head>
-<body>
-<h1>DEV <span>STORE</span></h1>
-<p class="sub">Selecciona tu plataforma para abrir la tienda oficial</p>
 
+<body>
+  <h1>PS4DEV <span>STORE</span></h1>
+  <p class="sub"></p>
+
+  <h1> EMULADORES </h1>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-img"><img src="./imagenes/ps4logo.png" alt="PS4 Dev Store"></div>
+      <div class="card-body">
+        <h2>Playstation 1 </h2>
+        <p>Emulador de Playstation 1 </p>
+        <a target=#blank href="https://drive.google.com/file/d/1vH0Kt3SocKFh0g1KeionI7MWl0xGOzM2/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img"><img src="./imagenes/ps4logo.png" alt="PS3 Dev Store"></div>
+    <div class="card-body">
+      <h2>PS4SX2</h2>
+      <p>Emulador de PlayStation 2 experimental</p>
+<a target=#blank href ="https://drive.google.com/file/d/1w15MFnoJE8LcFsdLh1LIs9yLoQ45qibD/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-img"><img src="./imagenes/ps4logo.png" alt="PS2 Dev Store"></div>
+    <div class="card-body">
+      <h2>R2RETRO</h2>
+      <p>Multiemulador que ejecuta nucleos de NES SNES N64 GB GBC GBA</p>
+     <a target=#blank href ="https://drive.google.com/file/d/1wRFV2vXBOZ_4TeYSI_J52jERDFea1ZeJ/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+    </div>
+  </div>
+</div>
+
+<!--- NUEVO GRID -->
 <div class="grid">
   <div class="card">
-    <div class="card-img"><img src="ps4-devstore.jpg" alt="PS4 Dev Store"></div>
+    <div class="card-img"><img src="./imagenes/ps4logo.png" alt="PS4 Dev Store"></div>
     <div class="card-body">
-      <h2>PS4 Dev Store</h2>
-      <p>Tienda oficial de homebrew y ports para PS4. GoldHEN, Apollo, Itemzflow y juegos PKG actualizados.</p>
-      <button class="btn-ir" onclick="openStore('ps4dev.html','PS4 Dev Store')">IR →</button>
+      <h2>NINTENDO DS 3DS</h2>
+      <p>Emulador de las consolas NINTEND DS - 3DS </p>
+<a target=#blank href ="https://drive.google.com/file/d/1rpFe4K1xSp3m8NZH4uQJqcONPyPTrg1p/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+    <br>
+    <a target=#blank href ="https://drive.google.com/file/d/1rzJLDgnonShmYROfIhuM7QlcfN0C36FK/view?usp=drive_link"><button class="btn-ir">Descargar archivos 60FPS</button></a>
+    
+    </div>
+  </div>
+    <div class="card">
+    <div class="card-img"><img src="./imagenes/ps4logo.png" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>DOLPHIN PS4</h2>
+      <p>Emulador de las consolas Nintendo Gamecube & Nintendo Wii con constantes actualizaciones</p>
+      <a target=#blank href ="https://drive.google.com/file/d/1Kdq6o_Da4PiONscWuCID-EVrcuboA3mc/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+      <br>
+      <a target=#blank href ="https://github.com/iHaiDeeZ/DolphinPS4"><button class="btn-ir">Github</button></a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-img"><img src="./imagenes/ps4logo.png" alt="PS2 Dev Store"></div>
+    <div class="card-body">
+      <h2>Resonance</h2>
+      <p>Emulador de la SEGA dreamcast</p>
+<a target=#blank href ="https://drive.google.com/file/d/1v78VpBrlX2HNG4pi-qNIY2ouSu_7rWjx/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-img"><img src="ps3-devstore.jpg" alt="PS3 Dev Store"></div>
+    <div class="card-img"><img src="./imagenes/ps4logo.png" alt="PS2 Dev Store"></div>
     <div class="card-body">
-      <h2>PS3 Dev Store</h2>
-      <p>Catálogo PS3 con PKG, homebrew, emuladores y herramientas para HEN y CFW.</p>
-      <button class="btn-ir" onclick="openStore('ps3dev.html','PS3 Dev Store')">IR →</button>
+      <h2>CREMA</h2>
+      <p>Emulador de Nintendo Wii U</p>
+<a target=#blank href ="https://drive.google.com/file/d/1rC0jUwtu1NjA48P90YPN_pqYcWhYCxYW/view?usp=drive_link4"><button class="btn-ir">Descargar</button></a>
+<br>
+<a target=#blank href ="https://chriztr.github.io/cemu_shader_and_pipeline_caches/"><button class="btn-ir">Descargar Shaders</button></a>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-img"><img src="ps2-devstore.jpg" alt="PS2 Dev Store"></div>
+    <div class="card-img"><img src="./imagenes/ps4logo.png" alt="PS2 Dev Store"></div>
     <div class="card-body">
-      <h2>PS2 Dev Store</h2>
-      <p>Clásicos PS2 remasterizados, OPL, homebrew y packs de juegos listos para tu consola.</p>
-      <button class="btn-ir" onclick="openStore('ps2dev.html','PS2 Dev Store')">IR →</button>
+      <h2>NX ORBIS</h2>
+      <p>Emulador de Nintendo Switch Experimental</p>
+<a target=#blank href ="https://drive.google.com/file/d/1w_RRZt0vY7Tt36UlWUhKoCCdzdS6Zdcr/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
     </div>
   </div>
 </div>
 
-<div class="iframe-bg" id="iframeBg">
-  <div class="iframe-header"><h2>🎮 <span id="iframeTitle">Dev Store</span></h2><button onclick="closeStore()">✕ Cerrar</button></div>
-  <iframe id="storeFrame" src=""></iframe>
+
+<h1> APLICACIONES PS4  </h1>
+<!--- NUEVO GRID -->
+<div class="grid">
+  <div class="card">
+    <div class="card-img"><img src="./imagenes/fpkgi.png" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>FPKGI STORE</h2>
+      <p>Tienda para descargar juegos </p>
+<a target=#blank href ="https://drive.google.com/file/d/1mfkErdTq9G4-wLh9DOoNULbVdJtDNrW-/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+    </div>
+  </div>
+
+    <div class="card">
+    <div class="card-img"><img src="./imagenes/ps4logo.png" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>Diplay PS4 Store</h2>
+      <p>Tineda brasileña para descargar juegos de PS1 PS2 Y PS4 </p>
+      <a target=#blank href ="https://drive.google.com/file/d/1Kdq6o_Da4PiONscWuCID-EVrcuboA3mc/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+      </div>
+  </div>
 </div>
+
+
+
+<h1> PORTS </h1>
+
+<!--- NUEVO GRID -->
+<div class="grid">
+  <div class="card">
+    <div class="card-img"><img src="./imagenes/mario64.jpg" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>SUPER MARIO 64</h2>
+      <p>Port del juego original de Nintendo 64 </p>
+<a target=#blank href ="https://drive.google.com/file/d/1sXsVi_gbTjXPNpqkfOeVsinnPS7iqRfi/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+    </div>
+  </div>
+
+    <div class="card">
+    <div class="card-img"><img src="./imagenes/mariokart64.jpg" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>MARIO KART 64</h2>
+      <p>Port del juego original de Nintendo 64 </p>
+      <a target=#blank href ="https://drive.google.com/file/d/1wdmD6CUkXWVRXI788pykmJjR4t9sw4HA/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+      </div>
+  </div>
+
+<div class="card">
+    <div class="card-img"><img src="./imagenes/smash.jpg" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>Super Smash Bros 64</h2>
+      <p>Port de Super Smash bros Original de Nintendo 64</p>
+      <a target=#blank href ="https://drive.google.com/file/d/1wfIbLIsm0diCyHxK14ix-gr6UiZnnQ2T/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+      </div>
+  </div>
+
+
+   <div class="card">
+    <div class="card-img"><img src="./imagenes/zelda1.jpg" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>The legend of Zelda Ocarina of time</h2>
+      <p>Port de  The legend of Zelda Ocarina of time  Original de Nintendo 64</p>
+      <a target=#blank href ="https://drive.google.com/file/d/1spaAT-3GIch7aOw2c0iMyYmlUrlJodxd/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+      </div>
+  </div>
+
+   <div class="card">
+    <div class="card-img"><img src="./imagenes/zelda2.jpg" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>The legend of Zelda Majora 's mask</h2>
+      <p>Port de  The legend of Zelda Majora 's mask Original de Nintendo 64</p>
+      <a target=#blank href ="https://drive.google.com/file/d/1seE4IY1m3dPFLd3xUldxIEadlsiJ8bY2/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+      </div>
+  </div>
+
+   <div class="card">
+    <div class="card-img"><img src="./imagenes/halo1.jpg" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>HALO COMBAT EVOLVED</h2>
+      <p>Port de Halo original de la consola XBOX </p>
+      <a target=#blank href ="https://www.mediafire.com/file/8u4teni76tzado3/Halo_PS4.rar/file?dkey=w5ascni5s5h&r=339&fbclid=IwdGRjcAU7lfhleHRuA2FlbQIxMABwZG9mBXNydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABHmELskdi4ro936JoXrtqyt48BMFrShpGN6dSY4qRBucdRnnJae2A5fgdqrbP_aem_hfLrQ_43VYIiHprwx09eag"><button class="btn-ir">Descargar</button></a>
+      </div>
+  </div>
+
+  
+</div>
+<h1> JUEGOS </h1>
+<br>
+<!--- NUEVO GRID -->
+<div class="grid">
+  <div class="card">
+    <div class="card-img"><img src="./imagenes/fc27.jpg" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>FC27</h2>
+     <p>Voces:English, French, German, Italian, Japanese, Latin American (Spanish), Polish, Spanish, Arabic, Simplified Chinese, Korean, Turkish, Brazilian Portuguese, Dutch
+
+</p>
+      <h>70 GB</h>
+      <br>
+<a target=#blank href ="https://downloadgameps3.net/archives/46015"><button class="btn-ir">Descargar</button></a><a target=#blank href ="https://downloadgameps3.net/archives/47195"><button class="btn-ir">UPDATE</button></a><a target=#blank href ="https://akirabox.to/7d5GLZJMj3xR/file"><button class="btn-ir">DLC UNLOCKER</button></a>
+    </div>
+  </div>
+
+    <div class="card">
+    <div class="card-img"><img src="./imagenes/sfc.jpg" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>STREET FIGHTER 30 ANNIVERSARY COLLECTION</h2>
+     <p>IDIOMA : INGLES ESPAÑOL</p>
+      <h>6 GB</h>
+      <br>
+      <a target=#blank href ="https://drive.google.com/file/d/1wdmD6CUkXWVRXI788pykmJjR4t9sw4HA/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+      </div>
+  </div>
+
+<div class="card">
+    <div class="card-img"><img src="./imagenes/god2.jpg" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+     <h2>GOD OF WAR RAGNAROK </h2>
+      <p>IDIOMA : INGLES-PORTUGUES- ESPAÑOL LATINO</p>
+      <h>80 GB</h>
+      <br><a target=#blank href ="https://www.mediafire.com/folder/wkm6ot4od2sa2/GORA"><button class="btn-ir">JUEGO BASE</button></a><br><a target=#blank href ="https://www.mediafire.com/folder/izha0rqzps1sr/GOD5"><button class="btn-ir">UPDATE 5.05</button></a><br><a target=#blank href ="https://www.mediafire.com/folder/d5a8n9upddh83/GODLC"><button class="btn-ir">DLC</button></a>
+      </div>
+  </div>
+
+
+   <div class="card">
+    <div class="card-img"><img src="./imagenes/days.jpg" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>DAYS GONE </h2>
+      <p>IDIOMA : INGLES- ESPAÑOL LATINO</p>
+      <h>35 GB</h>
+      <br>
+      <a target=#blank href ="https://drive.google.com/drive/folders/1Lr8SyHggzxh7puZ9ma5BC01Y9Ki1ignW?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<footer>Hecho por Ramon Hernandez - Programado en Visual Studio Code</footer>
+
 
 <script>
-function openStore(url,title){
-  document.getElementById('storeFrame').src=url;
-  document.getElementById('iframeTitle').innerText=title;
-  document.getElementById('iframeBg').classList.add('show');
-  document.body.style.overflow='hidden';
-}
-function closeStore(){
-  document.getElementById('iframeBg').classList.remove('show');
-  document.getElementById('storeFrame').src='';
-  document.body.style.overflow='';
-}
+  function openStore(url, title) {
+    document.getElementById('storeFrame').src = url;
+    document.getElementById('iframeTitle').innerText = title;
+    document.getElementById('iframeBg').classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeStore() {
+    document.getElementById('iframeBg').classList.remove('show');
+    document.getElementById('storeFrame').src = '';
+    document.body.style.overflow = '';
+  }
 </script>
 </body>
+
 </html>
