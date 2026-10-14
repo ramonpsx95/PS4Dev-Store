@@ -6,35 +6,209 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dev Store - Selección</title>
   <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,sans-serif}
-body{min-height:100vh;background:#080c18;color:#fff;display:flex;flex-direction:column;align-items:center;padding:24px 16px}
-body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(900px 500px at 20% 0%, rgba(0,132,255,.25), transparent), #080c18}
-h1{font-size:28px;font-weight:900;margin-bottom:6px;text-align:center} h1 span{color:#00c8ff}
-.sub{color:#8fa3c7;font-size:13px;margin-bottom:26px;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1020px;width:100%}
-.card{background:rgba(16,26,47,0.88);backdrop-filter:blur(14px);border:1px solid rgba(0,200,255,.18);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:.3s;box-shadow:0 10px 30px rgba(0,0,0,.4)}
-.card:hover{transform:translateY(-6px);border-color:#00e5ff;box-shadow:0 20px 50px rgba(0,0,0,.6),0 0 24px rgba(0,200,255,.25)}
-.card-img{width:100%;aspect-ratio:16/9;background:#000;overflow:hidden;display:grid;place-items:center}
-.card-img img{width:100%;height:100%;object-fit:cover;transition:.4s}
-.card:hover .card-img img{transform:scale(1.04)}
-.card-body{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
-.card-body h2{font-size:18px;font-weight:900;margin-bottom:6px}
-.card-body p{font-size:12.5px;color:#a9bddf;line-height:1.4;min-height:42px;margin-bottom:14px}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, sans-serif;
+  animation: none !important;
+  transition: none !important;
+  filter: none !important;
+}
+
+html {
+  scroll-behavior: auto !important;
+}
+
+body {
+  min-height: 100vh;
+  background: #080c18;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: #080c18;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+h1 span {
+  color: #00c8ff;
+}
+
+.sub {
+  color: #8fa3c7;
+  font-size: 13px;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1020px;
+  width: 100%;
+}
+
+.card {
+  background: #101a2f;
+  border: 1px solid rgba(0, 200, 255, 0.18);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover {
+  transform: none;
+  border-color:#00e5ff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+}
+
+.card:hover .card-img img {
+  transform: none;
+}
+
+.card-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-body h2 {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.card-body p {
+  font-size: 12.5px;
+  color: #a9bddf;
+  line-height: 1.4;
+  min-height: 42px;
+  margin-bottom: 14px;
+}
+
 .btn-ir{margin-top:auto;width:100%;padding:12px 16px;border:none;border-radius:12px;background:linear-gradient(135deg,#0084ff 0%, #00b7ff 100%);color:#fff;font-weight:900;font-size:14px;letter-spacing:0.5px;cursor:pointer;transition:.25s;box-shadow:0 6px 18px rgba(0,132,255,.35);text-transform:uppercase}
-.btn-ir:hover{background:linear-gradient(135deg,#0066ff 0%, #0090ff 100%);box-shadow:0 10px 28px rgba(0,102,255,.55);transform:translateY(-1px);filter:brightness(1.15)}
-.iframe-bg{position:fixed;inset:0;background:rgba(0,0,0,.92);backdrop-filter:blur(16px);display:none;z-index:200;flex-direction:column}
-.iframe-bg.show{display:flex}
-.iframe-header{height:60px;background:rgba(13,20,36,0.98);border-bottom:1px solid rgba(0,200,255,.25);display:flex;align-items:center;justify-content:space-between;padding:0 18px}
-.iframe-header h2{font-size:16px;font-weight:900} .iframe-header h2 span{color:#00c8ff}
-.iframe-header button{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;padding:8px 16px;border-radius:10px;cursor:pointer;font-weight:800}
-.iframe-bg iframe{flex:1;width:100%;border:none;background:#000}
+
+.btn-ir:hover {
+  background:linear-gradient(135deg,#0066ff 0%, #0090ff 100%);
+ box-shadow:0 10px 28px rgba(0,102,255,.55);
+ transform:translateY(-1px);
+ filter:brightness(1.15);
+}
+
+.iframe-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: none;
+  z-index: 200;
+  flex-direction: column;
+}
+
+.iframe-bg.show {
+  display: flex;
+}
+
+.iframe-header {
+  height: 60px;
+  background: #0d1424;
+  border-bottom: 1px solid rgba(0, 200, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+}
+
+.iframe-header h2 {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.iframe-header h2 span {
+  color: #00c8ff;
+}
+
+.iframe-header button {
+  background: #222b3d;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.iframe-bg iframe {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background: #000;
+}
+
+footer {
+  text-align: center;
+  color: #8fa3c7;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 
 <body>
   <h1>PS4DEV <span>STORE</span></h1>
   <p class="sub"></p>
-
+  
+  <div>
+<p>Actualizaciones:</p>
+<br>
+<br>
+<p>		- Se han agregado juegos de PS1 convertidos a PKG de PS4</p>
+<p>		- Se ha optimizado la página reduciendo las animaciones de los objetos ya que causa lentitud <br>
+		en equipos de bajos recursos en modo DESKTOP (4 RAM)
+</p>
+</div>
+<br>
+<br>
   <h1> EMULADORES </h1>
 
   <div class="grid">
@@ -205,7 +379,7 @@ h1{font-size:28px;font-weight:900;margin-bottom:6px;text-align:center} h1 span{c
 
   
 </div>
-<h1> JUEGOS </h1>
+<h1> JUEGOS PS4</h1>
 <br>
 <!--- NUEVO GRID -->
 <div class="grid">
@@ -256,17 +430,50 @@ h1{font-size:28px;font-weight:900;margin-bottom:6px;text-align:center} h1 span{c
   </div>
 </div>
 
+<h1> JUEGOS PSX2PS4</h1>
+<br>
+<!--- NUEVO GRID -->
+<div class="grid">
+  <div class="card">
+    <div class="card-img"><img src="./PSX2PS4/vanguard.PNG" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>VANGUARD BANDITS</h2>
+     <p>IDIOMA: INGLES</p>
+      <h>435 MB</h>
+      <br>
+<a target=#blank href ="https://drive.google.com/file/d/1f6XN6PbV3Vb6OF9jQgq4CD7mXaz_Uagq/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
+</div>
+  </div>
+  
+  <div class="card">
+    <div class="card-img"><img src="./PSX2PS4/TOYSTORYRACER.PNG" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>TOY STORY RACER</h2>
+     <p>IDIOMA: INGLES</p>
+      <h>600 MB</h>
+      <br>
+	  <a target=#blank href ="https://drive.google.com/file/d/1tG7OxZ1b0B3fsD2eSwNAY3Gkvk7kqrQE/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
 
+</div>
+  </div>
+  
+  <div class="card">
+    <div class="card-img"><img src="./PSX2PS4/SPYRO3.PNG" alt="PS4 Dev Store"></div>
+    <div class="card-body">
+      <h2>SPYRO YEAR OF THE DRAGON</h2>
+     <p>IDIOMA: INGLES</p>
+      <h>450 MB</h>
+      <br>
+	  <a target=#blank href ="https://drive.google.com/file/d/1tFktchESYSoYglEJhzsFaHECCa4qlZN1/view?usp=drive_link"><button class="btn-ir">Descargar</button></a>
 
-
-
-
-
-
+</div>
+  </div>
+</div>
 
 
 <br>
 <br>
+
 <footer>Hecho por Ramon Hernandez - Programado en Visual Studio Code</footer>
 
 
