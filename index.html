@@ -480,6 +480,57 @@ footer {
 <h1> APLICACIONES PS4  </h1>
 <!--- NUEVO GRID -->
 <div class="grid">
+
+<!-- CARD PS4MOUNT - NORMAL -->
+<div class="card" onclick="document.getElementById('modal-ps4mount').style.display='flex'" style="cursor:pointer;">
+  <div class="card-img-ps4">
+    <span style="position:absolute; top:10px; left:10px; background:#2ecc71; color:white; padding:4px 12px; border-radius:20px; font-size:12px; font-weight:bold; z-index:10;">NUEVO</span>
+    <img src="https://raw.githubusercontent.com/Vld439/PS4Mount-PS4/refs/heads/main/assets/ps4mount-ps4-512.png" alt="PS4Mount PS4">
+  </div>
+  <div class="card-body">
+    <h2>PS4Mount</h2>
+    <p>PS4<br>Juega PKGs sin instalar</p>
+    <button class="btn-ir">Ver Detalles</button>
+  </div>
+</div>
+
+<!-- VENTANA MODAL PS4MOUNT -->
+<div id="modal-ps4mount" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center; padding:20px;">
+  <div style="background:#1a1a1a; color:white; max-width:600px; width:100%; border-radius:15px; overflow:hidden; position:relative; font-family:Arial, sans-serif; max-height:90vh; overflow-y:auto;">
+    
+    <div style="text-align:center; padding:25px; background:#222;">
+      <img src="https://raw.githubusercontent.com/Vld439/PS4Mount-PS4/refs/heads/main/assets/ps4mount-ps4-512.png" alt="PS4Mount PS4" style="width:120px; height:120px; border-radius:20px;">
+      <h2 style="margin:15px 0 5px 0; font-size:22px;">PS4Mount para PS4</h2>
+      <p style="color:#2ecc71; font-weight:bold; margin:0;">Juega tus PKGs sin instalarlos y guarda tus juegos en Google Drive</p>
+    </div>
+
+    <div style="padding:20px; line-height:1.6; font-size:14px; text-align:left;">
+      <p><strong>Es una adaptación para PS4 de PS4Mount, el proyecto de gasb07 para PS5. Es gratis y de código abierto.</strong></p>
+      
+      <h3 style="color:#2ecc71; margin-top:15px;">Qué hace:</h3>
+      <ul style="padding-left:20px; margin:10px 0;">
+        <li><b>Olvídate de instalar.</b> Copia el pkg a un USB exFAT o a la memoria interna y juégalo directamente. Sin esperar la instalación.</li>
+        <li><b>Actualizaciones y DLC incluidos.</b> Luego de transferir un juego nuevo es necesario reiniciar la consola para poder abrirlo.</li>
+        <li><b>Panel web</b> desde el PC o el móvil (http://IP-de-la-PS4:8770) con tu biblioteca, portadas y ficha por juego.</li>
+        <li><b>Envía juegos desde el PC por la red.</b> Cada pkg se comprueba antes de enviarlo: si es fake, si tu firmware basta, si está completo y si cabe.</li>
+        <li><b>Copias en Google Drive.</b> Sube tus juegos (con actualización y DLC) a tu Drive y vuelve a bajarlos directo a la consola, sin PC. Si se corta, sigue sola.</li>
+        <li>En español e inglés.</li>
+      </ul>
+      
+      <p style="margin-top:15px; background:#2a2a2a; padding:10px; border-radius:8px;"><b>Requisitos:</b> PS4 con jailbreak y GoldHEN. Probado en firmware 13.52.</p>
+      <p style="font-size:12px;">Copia ps4mount-ps4.bin en /data/payloads/ y cárgalo con Payload Guest, o envía el .elf al puerto 9090.<br>Es una beta. Si algo falla, abre un issue en GitHub con el log del panel.</p>
+    </div>
+
+    <div style="padding:20px; display:flex; gap:10px; justify-content:center; background:#222;">
+      <a target="_blank" href="https://github.com/Vld439/PS4Mount-PS4/"><button style="background:#2ecc71; color:white; border:none; padding:10px 20px; border-radius:8px; font-weight:bold; cursor:pointer;">GitHub</button></a>
+      <button onclick="document.getElementById('modal-ps4mount').style.display='none'" style="background:#e74c3c; color:white; border:none; padding:10px 20px; border-radius:8px; font-weight:bold; cursor:pointer;">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+
+
+	
   <div class="card">
     <div class="card-img"><img src="./imagenes/fpkgi.png" alt="PS4 Dev Store"></div>
     <div class="card-body">
@@ -1791,7 +1842,15 @@ Hecho por Ramon Hernandez - Programado en Visual Studio Code
 
 
 <script>
-    
+
+// Cerrar al hacer clic fuera
+window.onclick = function(event) {
+  if (event.target == document.getElementById('modal-ps4mount')) {
+    document.getElementById('modal-ps4mount').style.display = 'none';
+  }
+}
+
+	
 function abrirModal(titulo, imagen, sinopsis, link){
   document.getElementById('modalTitle').innerText = titulo;
   document.getElementById('modalImg').src = imagen;
